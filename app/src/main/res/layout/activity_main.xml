@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/financeType"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/financeTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RadioButton
+            android:id="@+id/financeType_cds"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Checking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/financeType_loan"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <RadioButton
+            android:id="@+id/financeType_loan"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Loan"
+            app:layout_constraintEnd_toStartOf="@+id/financeType_checking"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/financeType_cds"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <RadioButton
+            android:id="@+id/financeType_checking"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="checkButton"
+            android:text="CDs"
+            app:layout_constraintEnd_toStartOf="@+id/financeType_cds"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="16dp" />
+    </RadioGroup>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cdsLayout"
+        android:layout_width="422dp"
+        android:layout_height="374dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="73dp">
+
+        <TextView
+            android:id="@+id/addCDsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add CDs" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loansLayout"
+        android:layout_width="422dp"
+        android:layout_height="374dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="73dp">
+
+        <TextView
+            android:id="@+id/addLoansLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Loan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkingLayout"
+        android:layout_width="422dp"
+        android:layout_height="374dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="73dp">
+
+        <TextView
+            android:id="@+id/addCheckingLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Checkings" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
